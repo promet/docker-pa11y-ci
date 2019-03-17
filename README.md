@@ -18,7 +18,7 @@ A sample docker-compose file for this container is as follows:
 version: '3.4'
 services:
   pa11y:
-    image: promet/docker-pa11y-ci
+    image: prometsource/docker-pa11y-ci:0.10
     volumes:
        - ./config.json:/workspace/config.json
 ```
@@ -35,18 +35,18 @@ A config.json example file is as follows (note as of this writing www.google.com
 
 ```javascript
 {
-	"defaults": {
-		"standard": "WCAG2AA"
-	},
-	"chromeLaunchConfig": {
-        "executablePath": "/usr/bin/google-chrome-stable",
-        "ignoreHTTPSErrors": false
-    },
-    "urls": [
-        "http://pa11y.org/",
-        "http://pa11y.org/contributing",
-        "https://www.google.com"
-    ]
+  "defaults": {
+    "standard": "WCAG2AA"
+  },
+  "chromeLaunchConfig": {
+    "executablePath": "/usr/bin/google-chrome-stable",
+    "ignoreHTTPSErrors": false
+  },
+  "urls": [
+    "http://pa11y.org/",
+    "http://pa11y.org/contributing",
+    "https://www.google.com"
+  ]
 }
 ```
 
