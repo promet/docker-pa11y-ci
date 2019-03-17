@@ -1,4 +1,7 @@
 # Pa11y CI Command Line tool in a Docker container
+
+[![Build Status](https://travis-ci.org/promet/docker-pa11y-ci.svg?branch=develop)](https://travis-ci.org/promet/docker-pa11y-ci)
+
 This repo contains the build for the Promet maintained docker container `promet/docker-pa11y-ci`.
 
 ## Background Information
