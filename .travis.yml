@@ -1,0 +1,25 @@
+language: ruby
+sudo: required
+
+services:
+  - docker
+
+git:
+  depth: 5
+
+before_install:
+  - export PATH=$PATH:$HOME/.local/bin
+  - sudo apt-get -qq update
+  - sudo apt-get install -y pv
+  - sudo apt-get -y -o Dpkg::Options::="--force-confnew" install docker-ce
+
+install:
+  # Left for documentation purposes in case you are using a private docker container
+  #- docker login -e="$DOCKER_EMAIL" -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
+  - docker-compose up --no-start
+
+script:
+  - docker-compose run pa11y /bin/bash -c "pa11y-ci --config /workspace/config.json"
+
+after_script:
+  - docker-compose down

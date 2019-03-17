@@ -1,0 +1,6 @@
+version: '3.4'
+services:
+  pa11y:
+    build: .
+    volumes:
+      - ./config.json:/workspace/config.json

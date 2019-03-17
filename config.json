@@ -1,0 +1,14 @@
+{
+	"defaults": {
+		"standard": "WCAG2AA"
+	},
+	"chromeLaunchConfig": {
+        "executablePath": "/usr/bin/google-chrome-stable",
+        "ignoreHTTPSErrors": false
+    },
+    "urls": [
+        "http://pa11y.org/",
+        "http://pa11y.org/contributing",
+        "https://www.google.com"
+    ]
+}
