@@ -97,7 +97,7 @@ You can set a length of time before you'll receive a timeout error for the test.
 {
   "defaults": {
     "standard": "WCAG2AA",
-    "ignore": [ "notice", "warning" ]
+    "timeout": 500
   }
 }
 ```
